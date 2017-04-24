@@ -1,0 +1,78 @@
+#' This package is used for estimating intrinsic dimension of a given dataset.
+#' 
+#' In common data analysis situations, an observed datum is expressed by a 
+#' p-dimensional vector. In general, the apparent data dimension p and its 
+#' intrinsic dimension d are different. A basic assumption in many data analysis
+#'  and machine learning methods is that the intrinsic dimension is low 
+#'  even when the apparent dimension is high and the data distribution is 
+#'  constrained onto a low dimensional manifold. 
+#'  Examples of such methods include manifold learning, subspace methods, and 
+#'  visualization and dimensionality reduction methods.
+#'  The key to the success of dimensionality reduction, manifold learning and
+#'  latent variable analysis lies in the accurate estimation of the
+#'  intrinsic dimension of the dataset at hand.
+#'  This package implements a number of intrinsic dimension estimation methods.
+#'  Some functions are for estimating the global intrinsic dimension while others
+#'  are capable of estimating both local and global intrinsic dimension.
+#'  
+#'  The package has functions \code{corint,convU,lbmle,nni,pack} for estimating global
+#'  intrinsic dimensions, and \code{mada,side} for estimating local intrinsic dimensions. 
+#'  A data generator \code{gendata} is included in the packege.
+#'   
+#' 
+#' 
+#' 
+#' @docType package
+#' @name ider-package
+#' @title Algorithms for Estimating Intrinsic Dimensions.
+#' @aliases ider
+#' @author Hideitsu Hino \email{hideitsu.hino@@gmail.com}
+#' @references P. Grassberger and I. Procaccia. Measuring the strangeness of strange attractors. 
+#' Physica, 1983.
+#' @references E. Levina and P. J. Bickel. Maximum likelihood estimation of 
+#' intrinsic dimension. Advances in Neural Information Processing Systems 17, 2005.
+#' @references D. MacKay and Z. Ghahramani. \url{http://www.inference.phy.cam.ac.uk/mackay/dimension/}
+#' @references K. W. Pettis et al. An intrinsic dimensionality estimator from near
+#' neighbor information. IEEE transactions on pattern recognition and machine intelligence, 1979.
+#' @references M. Hein and J-Y. Audibert. Intrinsic dimensionality estimation of
+#' submanifolds in Rd. International Conference on Machine Learning, 2005.
+#' @references B. Kegl. Intrinsic dimension estimation using packing numbers.
+#'  Advances in Neural Information Processing Systems 15, 2002.
+#' @references B. Eriksson and M. Crovella. Estimating intrinsic dimension via clustering.
+#' IEEE Statistical Signal Processing Workshop, 2012.
+#' @references H. Hino, J. Fujiki, S. Akaho, and N. Murata, 'Local Intrinsic Dimension Estimation by Generalized Linear Modeling', Neural Computation, 2017
+#' 
+#' @examples 
+#' \dontrun{
+#'  ## global intrinsic dimension estimate
+#'  x <- gendata(DataName='SwissRoll',n=300)
+#'  
+#'  x <- gendata(DataName='SwissRoll',n=300,p=3,q=2)
+#'  estcorint <- corint(x=x,k1=5,k2=10)
+#'  print(estcorint)
+#'  
+#'  estmle <- lbmle(x=x,k1=3,k2=5)  ## estimation by mle
+#'  print(estmle) 
+#'  
+#'  estnii <- nni(x=x) ## estimation by nearest neighbor information
+#'  print(estnni)
+#'  
+#'  estconvU <- convU(x=x)  ## estimation by convergence property of U-stats
+#'  print(estconvU)
+#'  
+#' estpackG <- pack(x=x,greedy=TRUE)  ## estimation by the packing number method with greedy algorithm
+#' print(estpackG)
+#' estpackC <- pack(x=x,greedy=FALSE) ## estimation by the packing number method by clutering
+#' print(estpackC)
+#' 
+#'  ## local intrinsic dimension estimate
+#'  tmp <- gendata(DataName='ldbl',n=300)
+#' x <- tmp$x
+#' estmada <- mada(x=x,local=TRUE)
+#' head(estmada)  ## estimated local intrinsic dimensions by mada
+#' head(tmp$tDim) ## true local intrinsic dimensions
+#' estside <- side(x=x,local=TRUE)
+#' head(estside) ## estimated local intrinsic dimensions by side
+#' 
+#' }
+NULL
