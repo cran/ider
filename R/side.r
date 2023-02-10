@@ -103,7 +103,7 @@ side <- function(x, maxDim = 5, DM = FALSE, local = FALSE, method = "disc", comb
             model <- try(suppressWarnings(stats::glm(y ~ x1 + x2 - 1, data = regDat, fam = stats::poisson(link = "identity"), 
                 start = c(0.1, 0.1))))
             
-            if (class(model)[1] == "try-error") {
+            if( inherits ((model)[1],"try-error")) {
                 stop("glm error")
             }
             Model[[length(Model) + 1]] <- model
@@ -138,10 +138,10 @@ side <- function(x, maxDim = 5, DM = FALSE, local = FALSE, method = "disc", comb
             }
             res <- try(suppressWarnings(stats::optim(init, lkcont, dlkcont, method = "L-BFGS-B", 
                 lower = c(1, 0, -Inf), upper = c(maxDim, Inf, Inf))), silent = TRUE)
-            if (class(res) == "try-error") {
+            if( inherits (res,"try-error")) {
                 res <- try(suppressWarnings(stats::optim(init, lkcont, dlkcont, method = "BFGS")), 
                   silent = TRUE)
-                if (class(res) == "try-error") {
+                if( inherits (res, "try-error")) {
                   estDimsCont[i] <- init[1]
                 } else if (res$par[1] > 0) {
                   estDimsCont[i] <- res$par[1]

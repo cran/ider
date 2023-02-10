@@ -4,8 +4,14 @@
 \alias{side}
 \title{Higher-order Local Information Dimension Estimator.}
 \usage{
-side(x, maxDim = 5, DM = FALSE, local = FALSE, method = "disc",
-  comb = "average")
+side(
+  x,
+  maxDim = 5,
+  DM = FALSE,
+  local = FALSE,
+  method = "disc",
+  comb = "average"
+)
 }
 \arguments{
 \item{x}{data matrix or distance matrix given by as.matrix(dist(x)).}

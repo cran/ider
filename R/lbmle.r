@@ -17,7 +17,7 @@
 #' @author Hideitsu Hino \email{hideitsu.hino@@gmail.com}
 #' @references E. Levina and P. J. Bickel. Maximum likelihood estimation of 
 #' intrinsic dimension. Advances in Neural Information Processing Systems 17, 2005.
-#' @references D. MacKay and Z. Ghahramani. \url{http://www.inference.phy.cam.ac.uk/mackay/dimension/}
+#' @references D. MacKay and Z. Ghahramani. \url{http://www.inference.org.uk/mackay/dimension/}
 #' @examples 
 #' x <- gendata(DataName='SwissRoll',n=300)
 #' estmle <- lbmle(x=x,k1=3,k2=5)
@@ -28,7 +28,7 @@ lbmle <- function(x = NULL, k1 = NULL, k2 = NULL, BC = TRUE, DM = FALSE, p = NUL
         stop("data or distance matrix x is missing")
     }
     if (DM == TRUE) {
-        if (class(x) == "dist") {
+        if (inherits(x,"dist")) {
             x <- as.matrix(x)
         }
     }

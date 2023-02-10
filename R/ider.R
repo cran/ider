@@ -31,7 +31,7 @@
 #' Physica, 1983.
 #' @references E. Levina and P. J. Bickel. Maximum likelihood estimation of 
 #' intrinsic dimension. Advances in Neural Information Processing Systems 17, 2005.
-#' @references D. MacKay and Z. Ghahramani. \url{http://www.inference.phy.cam.ac.uk/mackay/dimension/}
+#' @references D. MacKay and Z. Ghahramani. \url{http://www.inference.org.uk/mackay/dimension/}
 #' @references K. W. Pettis et al. An intrinsic dimensionality estimator from near
 #' neighbor information. IEEE transactions on pattern recognition and machine intelligence, 1979.
 #' @references M. Hein and J-Y. Audibert. Intrinsic dimensionality estimation of

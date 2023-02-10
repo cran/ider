@@ -4,9 +4,8 @@
 \name{handD}
 \alias{handD}
 \title{Hand ratation data}
-\format{An object of class \code{'dist'}.}
-\source{
-\href{http://vasc.ri.cmu.edu/idb/html/motion/hand/index.html}{CMU/VASC Image Database}
+\format{
+An object of class \code{'dist'}.
 }
 \usage{
 data(handD)

@@ -4,8 +4,16 @@
 \alias{gendata}
 \title{Data generator for intrinsic dimension estimation.}
 \usage{
-gendata(DataName = "SwissRoll", n = 300, p = NULL, noise = NULL,
-  ol = NULL, curv = 1, seed = 123, sorted = FALSE)
+gendata(
+  DataName = "SwissRoll",
+  n = 300,
+  p = NULL,
+  noise = NULL,
+  ol = NULL,
+  curv = 1,
+  seed = 123,
+  sorted = FALSE
+)
 }
 \arguments{
 \item{DataName}{Name of dataset, one of the following: 

@@ -4,8 +4,7 @@
 \alias{lbmle}
 \title{Maximum Likelihood Estimation of Intrinsic Dimension.}
 \usage{
-lbmle(x = NULL, k1 = NULL, k2 = NULL, BC = TRUE, DM = FALSE,
-  p = NULL)
+lbmle(x = NULL, k1 = NULL, k2 = NULL, BC = TRUE, DM = FALSE, p = NULL)
 }
 \arguments{
 \item{x}{data matrix or distance matrix given by as.matrix(dist(x)).}
@@ -40,7 +39,7 @@ print(estmle)
 E. Levina and P. J. Bickel. Maximum likelihood estimation of 
 intrinsic dimension. Advances in Neural Information Processing Systems 17, 2005.
 
-D. MacKay and Z. Ghahramani. \url{http://www.inference.phy.cam.ac.uk/mackay/dimension/}
+D. MacKay and Z. Ghahramani. \url{http://www.inference.org.uk/mackay/dimension/}
 }
 \author{
 Hideitsu Hino \email{hideitsu.hino@gmail.com}

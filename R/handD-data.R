@@ -17,7 +17,6 @@
 #' @references B. Kegl. Intrinsic dimension estimation using packing numbers. Advances in Neural Information Processing Systems 15, 2002.
 #' @references H. Hino, J. Fujiki, S. Akaho, and N. Murata, 'Local Intrinsic Dimension Estimation by Generalized Linear Modeling', Neural Computation, 2017
 #'
-#' @source \href{http://vasc.ri.cmu.edu/idb/html/motion/hand/index.html}{CMU/VASC Image Database}
 #'
 #' @examples
 #' data(handD)

@@ -4,7 +4,7 @@
 \name{ider-package}
 \alias{ider-package}
 \alias{ider}
-\title{Algorithms for estimating intrinsic dimensions.}
+\title{Algorithms for Estimating Intrinsic Dimensions.}
 \description{
 This package is used for estimating intrinsic dimension of a given dataset.
 }
@@ -69,7 +69,7 @@ Physica, 1983.
 E. Levina and P. J. Bickel. Maximum likelihood estimation of 
 intrinsic dimension. Advances in Neural Information Processing Systems 17, 2005.
 
-D. MacKay and Z. Ghahramani. \url{http://www.inference.phy.cam.ac.uk/mackay/dimension/}
+D. MacKay and Z. Ghahramani. \url{http://www.inference.org.uk/mackay/dimension/}
 
 K. W. Pettis et al. An intrinsic dimensionality estimator from near
 neighbor information. IEEE transactions on pattern recognition and machine intelligence, 1979.

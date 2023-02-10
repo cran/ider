@@ -4,8 +4,7 @@
 \alias{mada}
 \title{Manifold-Adaptive Local Dimension Estimation.}
 \usage{
-mada(x, k = NULL, comb = "average", DM = FALSE, local = FALSE,
-  maxDim = 5)
+mada(x, k = NULL, comb = "average", DM = FALSE, local = FALSE, maxDim = 5)
 }
 \arguments{
 \item{x}{data matrix or distance matrix given by as.matrix(dist(x)).}
